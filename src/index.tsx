@@ -1,7 +1,11 @@
+import React from 'react';
 import ReactDom from 'react-dom';
+import App from './App';
+import './style/index.css';
 
-const App = () => {
-  return <h4>Hello, this is Miłosz</h4>;
-};
-
-ReactDom.render(<App />, document.getElementById('root'));
+ReactDom.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
