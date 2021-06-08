@@ -1,0 +1,63 @@
+@import './_variable.scss';
+
+$link-btn-height: 4rem;
+
+:root {
+  font-size: 12px;
+  font-family: Lato-regular;
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $white;
+}
+
+.nav {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $contrast-middle;
+  border-radius: 1.2rem;
+  height: $link-btn-height;
+  color: $white;
+  min-width: 3 * $link-btn-height;
+  margin: 0 1rem;
+
+  &-img {
+    height: $link-btn-height;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin: 2.6rem;
+  }
+}
+
+.link-one-item {
+  justify-content: center;
+}

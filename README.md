@@ -1,5 +1,8 @@
 # Learning repo for the start the jurney with React
 
+Grafical project of this repo:
+https://www.figma.com/file/gcxFCWwGqwQC0vm1pDii1b/Drinker?node-id=0%3A1
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
