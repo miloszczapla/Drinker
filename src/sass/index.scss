@@ -3,13 +3,13 @@
 $link-btn-height: 4rem;
 
 :root {
-  font-size: 12px;
-  font-family: Lato-regular;
+  font-size: 16px;
+  font-family: Lato-light;
 }
 
 @media (max-width: 600px) {
   :root {
-    font-size: 9px;
+    font-size: 2.6vw;
   }
 }
 
@@ -29,35 +29,44 @@ body {
 
 .nav {
   margin: 1.5rem 0;
+  padding: 1rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: flex-end;
+  &-section {
+    display: flex;
+  }
 }
 
 .nav-link {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
 
   background-color: $contrast-middle;
   border-radius: 1.2rem;
   height: $link-btn-height;
   color: $white;
-  min-width: 3 * $link-btn-height;
-  margin: 0 1rem;
+  min-width: 3.5 * $link-btn-height;
+  margin-right: 1rem;
 
   &-img {
     height: $link-btn-height;
   }
 
   h2 {
-    font-size: 3rem;
-    margin: 2.6rem;
+    font-size: 2.4rem;
+    margin: auto;
   }
 }
 
 .link-one-item {
   justify-content: center;
+}
+
+@media (max-width: 220px) {
+  .nav-link {
+    margin-top: 10px;
+  }
+
+  .nav-section {
+    flex-direction: column;
+  }
 }
