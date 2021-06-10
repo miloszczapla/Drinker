@@ -4,7 +4,7 @@ $link-btn-height: 4rem;
 
 :root {
   font-size: 16px;
-  font-family: Lato-light;
+  font-family: Lato-regular;
 }
 
 @media (max-width: 600px) {
@@ -70,3 +70,5 @@ body {
     flex-direction: column;
   }
 }
+
+@import './_about.scss';
