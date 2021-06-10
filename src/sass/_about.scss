@@ -6,10 +6,20 @@
   height: 30rem;
   margin-top: 3rem;
 
-  &-info,
+  &-info {
+    text-align: justify;
+    width: 36rem;
+    font-size: 1.5rem;
+
+    span {
+      display: block;
+      text-align: right;
+    }
+  }
+
   &-example {
-    max-width: 550px;
-    min-width: 550px;
+    text-align: justify;
+    width: 36rem;
     font-size: 1.5rem;
 
     h4 {
@@ -19,12 +29,10 @@
       color: $contrast-lighter;
     }
   }
-  &-info {
-    text-align-last: right;
-  }
 
   &-banner {
     font-family: Pacifico;
+    font-weight: 400;
     color: $light-optional;
     font-size: 7rem;
     letter-spacing: 0.15rem;

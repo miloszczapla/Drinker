@@ -19,14 +19,8 @@
 }
 
 :root {
-  font-size: 16px;
+  font-size: clamp(4px, 2.6vw, 14px);
   font-family: Lato-regular;
-}
-
-@media (max-width: 600px) {
-  :root {
-    font-size: 2.6vw;
-  }
 }
 
 * {
@@ -45,6 +39,7 @@ body {
 
 .nav {
   margin: 1.5rem 0;
+  margin-right: 7.5vw;
   padding: 1rem;
   display: flex;
   justify-content: flex-end;
@@ -54,21 +49,34 @@ body {
   display: flex;
 }
 
+@media screen and (max-width: 600px) {
+  .nav {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav {
+    margin-right: calc(30vw - 225px);
+  }
+}
+
 .nav-link {
   display: flex;
   background-color: #44c1ba;
   border-radius: 1.2rem;
   height: 4rem;
+  width: 14rem;
   color: #fafaff;
-  min-width: 14rem;
   margin-right: 1rem;
 }
 
-.nav-link-img {
+.nav-link img {
   height: 4rem;
 }
 
 .nav-link h2 {
+  font-weight: 400;
   font-size: 2.4rem;
   margin: auto;
 }
@@ -95,25 +103,33 @@ body {
   margin-top: 3rem;
 }
 
-.about-info, .about-example {
-  max-width: 550px;
-  min-width: 550px;
+.about-info {
+  text-align: justify;
+  width: 36rem;
   font-size: 1.5rem;
 }
 
-.about-info h4, .about-example h4 {
+.about-info span {
+  display: block;
+  text-align: right;
+}
+
+.about-example {
+  text-align: justify;
+  width: 36rem;
+  font-size: 1.5rem;
+}
+
+.about-example h4 {
   margin-top: 1.5rem;
   font-family: Lato-light;
   text-align: center;
   color: #c884a6;
 }
 
-.about-info {
-  text-align-last: right;
-}
-
 .about-banner {
   font-family: Pacifico;
+  font-weight: 400;
   color: #fccf4d;
   font-size: 7rem;
   letter-spacing: 0.15rem;
