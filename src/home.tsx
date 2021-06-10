@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import List from './List';
-// import axios from 'axios';
 
 const Home = () => {
   const endPoints = useMemo(
@@ -17,35 +16,32 @@ const Home = () => {
   // const details = www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007
 
   const [phrases, setPhrases] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPhrases(e.target.value);
-    getData(phrases, endPoints);
+    setIsLoading(true);
   };
 
   useEffect(() => {
-    const TimeOutID = setTimeout(() => getData(phrases, endPoints), 5000);
-    console.log('timeout started');
+    console.log(isLoading);
+  });
+
+  useEffect(() => {
+    const TimeOutID = setTimeout(() => getData(phrases, endPoints), 2000);
     return () => {
       clearTimeout(TimeOutID);
     };
   }, [phrases, endPoints]);
 
   const getData = (phrases: string, endPoints: string[]) => {
-    // let drink;
     phrases.split(',').forEach((phrase) => {
       endPoints.forEach((link) => {
         fetch(link + phrase)
           .then((response) => response.json())
-          .then((data) => console.log(data));
-
-        //   response.json()})
-        // .then((data) => console.log(data));
-
-        // axios
-        //   .get(link + phrase)
-        //   .then((response) => console.log(response))
-        //   .catch((err) => err.preventDefault);
+          .then((data) => console.log(data))
+          .then(() => setIsLoading(false))
+          .catch(() => setIsLoading(true));
       });
     });
   };
