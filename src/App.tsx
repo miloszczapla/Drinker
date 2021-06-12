@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './home';
 import About from './about';
-import Error from './error';
+import Error from './errorPage';
 import NavBar from './navbar';
 
 const App = () => {
