@@ -8,7 +8,7 @@ const About = () => {
       </article>
       <article className='about-example'>
         If you are looking for a drink with few exact igridient use this syntax:
-        <h4>Ingredient I + space + Ingredient II + ...</h4>
+        <h4>Phrase I + comma + Phrase II + ...</h4>
       </article>
       <h1 className='about-banner'>Enjoy!</h1>
     </main>
