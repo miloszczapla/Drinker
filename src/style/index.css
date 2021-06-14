@@ -19,14 +19,8 @@
 }
 
 :root {
-  font-size: 16px;
-  font-family: Lato-light;
-}
-
-@media (max-width: 600px) {
-  :root {
-    font-size: 2.6vw;
-  }
+  font-size: clamp(6px, 2.6vw, 14px);
+  font-family: Lato-regular;
 }
 
 * {
@@ -59,16 +53,17 @@ body {
   background-color: #44c1ba;
   border-radius: 1.2rem;
   height: 4rem;
+  width: 14rem;
   color: #fafaff;
-  min-width: 14rem;
   margin-right: 1rem;
 }
 
-.nav-link-img {
+.nav-link img {
   height: 4rem;
 }
 
 .nav-link h2 {
+  font-family: lato-light;
   font-size: 2.4rem;
   margin: auto;
 }

@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 import icon from './assets/img/drinkericon-large.svg';
 
-const alt = 'Drinker icon';
-
 const NavBar = () => {
+  const alt = 'Drinker icon';
   return (
     <nav className='nav'>
       <section className='nav-section'>
