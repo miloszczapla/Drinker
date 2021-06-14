@@ -1,0 +1,44 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-input {
+    position: relative;
+    color: $contrast-lighter;
+    margin-top: 2rem;
+    width: 28rem;
+    font-size: 2.6rem;
+    border: 0;
+    outline: 0;
+    background-color: $white;
+
+    ::placeholder {
+      color: rgba(30, 26, 29, 0.68);
+    }
+  }
+
+  &-input-line {
+    width: 28rem;
+    height: 1px;
+    background-color: rgba(30, 26, 29, 0.68);
+    box-shadow: 0px 3px 6px rgba(30, 26, 29, 0.81);
+  }
+}
+
+.loading {
+  margin-top: 8rem;
+  img {
+    height: 10rem;
+    animation: rotation 2s infinite linear;
+  }
+}
