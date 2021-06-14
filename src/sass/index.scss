@@ -3,7 +3,7 @@
 $link-btn-height: 4rem;
 
 :root {
-  font-size: clamp(6px, 2.6vw, 14px);
+  font-size: clamp(4px, 2.6vw, 14px);
   font-family: Lato-regular;
 }
 
@@ -23,11 +23,20 @@ body {
 
 .nav {
   margin: 1.5rem 0;
+  margin-right: 7.5vw;
   padding: 1rem;
   display: flex;
   justify-content: flex-end;
   &-section {
     display: flex;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: 1000px) {
+    margin-right: calc(30vw - 225px);
   }
 }
 
@@ -46,7 +55,7 @@ body {
   }
 
   h2 {
-    font-family: lato-light;
+    font-weight: 400;
     font-size: 2.4rem;
     margin: auto;
   }
@@ -67,3 +76,4 @@ body {
 }
 
 @import './_error.scss';
+@import './_about.scss';
