@@ -3,14 +3,8 @@
 $link-btn-height: 4rem;
 
 :root {
-  font-size: 16px;
-  font-family: Lato-light;
-}
-
-@media (max-width: 600px) {
-  :root {
-    font-size: 2.6vw;
-  }
+  font-size: clamp(6px, 2.6vw, 14px);
+  font-family: Lato-regular;
 }
 
 * {
@@ -43,15 +37,16 @@ body {
   background-color: $contrast-middle;
   border-radius: 1.2rem;
   height: $link-btn-height;
+  width: 3.5 * $link-btn-height;
   color: $white;
-  min-width: 3.5 * $link-btn-height;
   margin-right: 1rem;
 
-  &-img {
+  img {
     height: $link-btn-height;
   }
 
   h2 {
+    font-family: lato-light;
     font-size: 2.4rem;
     margin: auto;
   }
