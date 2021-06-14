@@ -80,3 +80,37 @@ body {
     flex-direction: column;
   }
 }
+
+.error {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 44rem;
+}
+
+.error-title {
+  color: #3587a4;
+  font-size: 4rem;
+  font-family: Lato-light;
+}
+
+.error-mess {
+  font-size: 2.6rem;
+  width: 30rem;
+}
+
+.error-link {
+  height: 5.6rem;
+  width: 20rem;
+  margin: 0;
+}
+
+.error-link img {
+  height: 5.6rem;
+}
+
+.error-link h2 {
+  font-size: 4rem;
+}
