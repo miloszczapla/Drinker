@@ -3,8 +3,14 @@
 $link-btn-height: 4rem;
 
 :root {
-  font-size: clamp(4px, 2.6vw, 14px);
+  font-size: clamp(4px, 2.2vw, 10px);
   font-family: Lato-regular;
+}
+
+@media screen and (min-width: 1400px) {
+  :root {
+    font-size: clamp(4px, 1.4vw, 18px);
+  }
 }
 
 * {
@@ -49,6 +55,7 @@ body {
   width: 3.5 * $link-btn-height;
   color: $white;
   margin-right: 1rem;
+  box-shadow: -2px 3px 3px rgba(30, 26, 29, 0.34);
 
   img {
     height: $link-btn-height;
@@ -78,3 +85,4 @@ body {
 @import './_error.scss';
 @import './_about.scss';
 @import './home';
+@import './drink';

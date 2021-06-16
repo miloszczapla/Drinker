@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import Data from './interfaces/Data';
 import DataElement from './interfaces/DataElement';
-import Drink from './interfaces/Drink';
+import Drink from './interfaces/DrinkInterface';
 
 //fetching data from api
 

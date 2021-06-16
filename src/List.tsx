@@ -1,18 +1,20 @@
-// import Drink from './drink';
+import Drink from './drink';
+
+import DrinkInterface from './interfaces/DrinkInterface';
 
 interface Props {
-  drinks: Object[];
+  drinks: DrinkInterface[];
 }
 
 const List = ({ drinks }: Props) => {
   if (!drinks) console.log(drinks);
 
   return (
-    <>
-      {/* {drinks.map((drink) => (
+    <article className='drink-list'>
+      {drinks.map((drink) => (
         <Drink key={drink.idDrink} drink={drink} />
-      ))} */}
-    </>
+      ))}
+    </article>
   );
 };
 

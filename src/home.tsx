@@ -1,8 +1,9 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import List from './List';
 import Loading from './Loading';
-import Error from './error';
+import HomeError from './homeError';
 import useDrinks from './getData';
+import Drink from './interfaces/DrinkInterface';
 
 //
 const Home = () => {
@@ -23,7 +24,7 @@ const Home = () => {
   const [phrases, setPhrases] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [drinks, setDrinks] = useState<Object[]>([]);
+  const [drinks, setDrinks] = useState<Drink[]>([]);
   const getDrinks = useDrinks();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,12 +35,12 @@ const Home = () => {
   //fetching data after user stops typing
   useEffect(() => {
     const TimeOutID = setTimeout(() => {
-      getDrinks(phrases, endPoints).then((res) => {
+      getDrinks(phrases.replace(/\s+/g, ''), endPoints).then((res) => {
         setDrinks(res.duplicateArray);
         setIsError(res.hasError);
         setIsLoading(false);
       });
-    }, 2000);
+    }, 1000);
 
     return () => {
       clearTimeout(TimeOutID);
@@ -60,7 +61,7 @@ const Home = () => {
       </>
       {!isError && isLoading && <Loading />}
       {!isError && drinks && !isLoading && <List drinks={drinks} />}
-      {isError && <Error />}
+      {isError && <HomeError />}
     </main>
   );
 };

@@ -1,0 +1,53 @@
+.drink-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.drink {
+  padding: 0.8rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 88vw;
+  font-size: 2rem;
+  box-shadow: 0px 9px 10px -6px rgba(30, 26, 29, 0.34);
+  height: 10rem;
+
+  &-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h2 {
+      margin-left: 2rem;
+    }
+  }
+  &-image {
+    height: 8rem;
+  }
+  &-arrow {
+    width: 3rem;
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .drink {
+    width: 50rem;
+  }
+}
+
+.drink-hover:hover {
+  background-color: $toned-down-main;
+}
+
+.rotated {
+  transform: rotate(90deg);
+}

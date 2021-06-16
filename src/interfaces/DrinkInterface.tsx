@@ -1,5 +1,5 @@
 export default interface Drink {
-  idDrink: number;
+  idDrink: string;
   strDrink: string;
   strDrinkThumb: string;
 }
