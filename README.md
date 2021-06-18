@@ -3,6 +3,10 @@
 Grafical project of this repo:
 https://www.figma.com/file/gcxFCWwGqwQC0vm1pDii1b/Drinker?node-id=0%3A1
 
+deployed site: https://drinker-czapla.netlify.app/
+
+api which i used to get data: https://www.thecocktaildb.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
