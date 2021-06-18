@@ -36,6 +36,7 @@ const Ingridients = ({ ingridients, mesure }: Props) => {
             };
           });
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mesure]);
 
   return (

@@ -48,8 +48,6 @@ const DrinkDetails = ({ idDrink }: Props) => {
       .catch((err) => console.log(err));
   }, [idDrink]);
 
-  console.log(mainInfo);
-
   const isUndefined = (value: any) => {
     return undefined === value;
   };
@@ -65,11 +63,11 @@ const DrinkDetails = ({ idDrink }: Props) => {
       {isUndefined(mainInfo[2])
         ? ''
         : mainInfo[2].split(/[,.]/g).map((step, index) => {
-            if (!step) return;
+            if (!step) return '';
             return (
-              <div className='details-part'>
+              <div className='details-part' key={index}>
                 <div className='details-part-circle'></div>
-                <Step key={index} stepContent={step} />
+                <Step stepContent={step} />
               </div>
             );
           })}

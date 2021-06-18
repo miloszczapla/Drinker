@@ -34,6 +34,7 @@ const Home = () => {
 
   //fetching data after user stops typing
   useEffect(() => {
+    if (!phrases) return;
     const TimeOutID = setTimeout(() => {
       getDrinks(phrases.replace(/\s+/g, ''), endPoints).then((res) => {
         setDrinks(res.duplicateArray);
