@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Ingridients from './drinkDetailsLibrary/Ingridients';
 import Details from './interfaces/Details';
 import Step from './drinkDetailsLibrary/Step';
+import DetailsMain from './drinkDetailsLibrary/detailsmain';
 
 interface Props {
   idDrink: string;
@@ -47,14 +48,15 @@ const DrinkDetails = ({ idDrink }: Props) => {
       .catch((err) => console.log(err));
   }, [idDrink]);
 
+  console.log(mainInfo);
+
   const isUndefined = (value: any) => {
     return undefined === value;
   };
 
-  console.log(isUndefined(mainInfo[2]) ? '' : mainInfo[2].split(/[,.]/g));
-
   return (
     <div className='details'>
+      <DetailsMain isAlcoholic={mainInfo[0]} glassType={mainInfo[1]} />
       <div className='details-border'></div>
       <div className='details-part'>
         <div className='details-part-circle'></div>
