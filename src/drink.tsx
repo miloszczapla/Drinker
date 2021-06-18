@@ -14,12 +14,13 @@ const Drink = ({ drink }: Props) => {
 
   const handleClick = () => {
     setDetails(!details);
+
     setDrinkClass(() => {
-      if (details) return 'drink';
+      if (!details) return 'drink drink-expanded';
       return 'drink drink-hover';
     });
     setArrowClass(() => {
-      if (details) return arrowClass + ' rotated';
+      if (!details) return 'drink-arrow rotated';
       return 'drink-arrow';
     });
   };
@@ -38,8 +39,6 @@ const Drink = ({ drink }: Props) => {
         <img src={arrow} alt='arrow' className={arrowClass} />
       </div>
       {details && <DrinkDetails idDrink={drink.idDrink} />}
-
-      {/* {drink.strDrinkThumb} */}
     </section>
   );
 };

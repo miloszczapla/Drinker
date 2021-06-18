@@ -1,0 +1,33 @@
+.details {
+  position: relative;
+  margin-top: 2rem;
+
+  &-border {
+    position: absolute;
+    left: 1.25rem;
+    top: 1.6rem;
+    height: 90%;
+    width: 0.4rem;
+    border-radius: 0.4rem;
+    background-color: #531cb3;
+  }
+
+  &-part {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    // gap: 4rem;
+  }
+}
+
+.details-part-circle {
+  margin: 0 4rem 0 0.5rem;
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 50%;
+  background-color: #531cb3;
+}
+
+@import './ingridient';
+@import './step';

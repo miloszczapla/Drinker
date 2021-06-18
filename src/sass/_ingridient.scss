@@ -1,0 +1,17 @@
+.ingridient-content {
+  display: flex;
+  align-items: flex-start;
+  width: 70% !important;
+
+  &-left,
+  &-right {
+    margin: 2rem 0;
+    color: #44c1ba;
+    font-size: 1.85rem;
+    white-space: pre-wrap;
+  }
+
+  &-right {
+    margin-left: 6rem;
+  }
+}
